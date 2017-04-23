@@ -1,6 +1,8 @@
 package framework;
 
-public abstract class Product {
-    public abstract void use();
+public interface Product extends Cloneable{
+    public abstract void use(String s);
+    public abstract Product createClone();
 }
+
 

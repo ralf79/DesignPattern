@@ -1,21 +1,23 @@
 package framework;
-import framework.Factory;
-import framework.Product;
-import framework.idcard.IDCardFactory;
 
 public class Main {
 
 	public static void main(String[] args) {
-		Factory factory = new IDCardFactory();
-        Product card1 = factory.create("È«±æµ¿");
-        Product card2 = factory.create("ÆÛÁñÀÙ");
-        Product card3 = factory.create("ÀÚ¹Ù");
- 
-        card1.use();
-        card2.use();
-        card3.use();
+		 Manager manager=new Manager();
+	        UnderlinePen upen=new UnderlinePen('~');
+	        MessageBox mbox=new MessageBox('*');
+	        MessageBox sbox=new MessageBox('/');
+	        manager.register("strong", upen);
+	        manager.register("warning", mbox);
+	        manager.register("slash", sbox);
 
-        System.out.println(((IDCardFactory)factory).getOwners());
+	        Product p1=manager.create("strong");
+	        p1.use("Hello,world.");
+	        Product p2=manager.create("warning");
+	        p2.use("Hello,world.");
+	        Product p3=manager.create("slash");
+	        p3.use("Hello,world.");
+
 
 	}
 
