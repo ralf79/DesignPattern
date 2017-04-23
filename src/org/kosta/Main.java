@@ -26,13 +26,13 @@ public class Main {
         System.out.println("끝");
 
         System.out.println("싱글턴 예제3 시작");
-//        Triple p1=Triple.getInstance(0);
-//        Triple p2=Triple.getInstance(1);
+        Triple p1=Triple.getInstance(0);
+        Triple p2=Triple.getInstance(1);
         Triple p3=Triple.getInstance(2);
 
-//        System.out.println("p1 아이디 : "+p1.myId());
-//        System.out.println("p2 아이디 : "+p2.myId());
-//        System.out.println("p3 아이디 : "+p3.myId());
+        System.out.println("p1 아이디 : "+p1.myId());
+        System.out.println("p2 아이디 : "+p2.myId());
+        System.out.println("p3 아이디 : "+p3.myId());
         System.out.println("끝");
 
 	}
