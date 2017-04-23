@@ -17,18 +17,6 @@ public class Main {
 
 		System.out.println(chocolateDoubleMilkBraveCookie.getName());
 
-		// 소다 쿠키 만들기
-		Cookie SodaCookie = new Cookie() {
-			@Override
-			public String getName() {
-				return "소다 쿠키";
-			}
-		};
-
-		// 초콜릿을 두번 넣은 소다 쿠키 만들기
-		SodaCookie = new ChocolateTopping(new ChocolateTopping(SodaCookie));
-
-		System.out.println(SodaCookie.getName());
 	}
 
 }
