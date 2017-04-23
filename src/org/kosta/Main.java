@@ -3,20 +3,22 @@ package org.kosta;
 public class Main {
 
 	public static void main(String[] args) {
-		// 그냥 용감한 쿠키 만들기
-		Cookie braveCookie = new BraveCookie();
 
-		// 우유를 얹은 용감한 쿠키 만들기
-		Cookie milkBraveCookie = new MilkTopping(braveCookie);
-
-		// 그위에 초콜릿을 얹은 용감한 쿠키 만들기
-		Cookie chocolateMilkBraveCookie = new ChocolateTopping(milkBraveCookie);
-
-		// 그위에 우유를 한번 더 넣은 용감한 쿠키 만들기
-		Cookie chocolateDoubleMilkBraveCookie = new MilkTopping(chocolateMilkBraveCookie);
-
-		System.out.println(chocolateDoubleMilkBraveCookie.getName());
-
+		Aquarium aquarium = new Aquarium("[거북이 어항]");
+		AquariumDeco ADeco = new AquariumDeco(aquarium);
+		AquariumWater AWater = new AquariumWater(aquarium);
+		Turtle turtle = new Turtle(aquarium);
+		
+		System.out.println("청소시작");
+		
+		turtle.getAquarium();
+		ADeco.getAquarium();
+		AWater.getAquarium();
+		aquarium.setWash();
+		AWater.setAquarium();
+		ADeco.setAquarium();
+		turtle.insertAquarium();
+		
 	}
 
 }
