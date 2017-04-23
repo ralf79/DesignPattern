@@ -1,22 +1,26 @@
 package org.kosta;
 
-import org.kosta.abs.Unit;
-import org.kosta.impl.Fire;
-import org.kosta.impl.Firebat;
-import org.kosta.impl.Gun;
-import org.kosta.impl.Laser;
-import org.kosta.impl.Marine;
-
 public class Main {
-
-	public static void main(String[] args) {
-		Unit marine = new Marine(new Gun());
-		Unit firebat = new Firebat(new Fire());
-		Unit laserMarine = new Marine(new Laser());
-		
-		marine.useWeapon();
-		firebat.useWeapon();
-		laserMarine.useWeapon();
-	}
-
+    public static void main(String[] args) {
+        if(args.length!=1){
+            System.exit(0);
+        }
+        if(args[0].equals("plain")){
+            TextBuilder textBuilder=new TextBuilder();
+            Director director=new Director(textBuilder);
+            director.construct();
+            String result=textBuilder.getResult();
+            System.out.println(result);
+        }
+        else if(args[0].equals("html")){
+            HTMLBuilder htmlBuilder=new HTMLBuilder();
+            Director director=new Director(htmlBuilder);
+            director.construct();
+            String fileName=htmlBuilder.getResult();
+            System.out.println(fileName+"가 작성되었습니다!");
+        }
+        else{
+            System.exit(0);
+        }
+    }
 }
