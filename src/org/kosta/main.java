@@ -1,16 +1,12 @@
 package org.kosta;
 
-import org.kosta.factory.ComputerFactory;
-import org.kosta.factory.ProductFactory;
-import org.kosta.factory.TicketFactory;
-import org.kosta.product.Product;
+public class Main {
 
-	public class main {
-	    public static void main(String[] args) {
-	        Product com = ProductFactory.getProduct(new ComputerFactory("com1", 2000));
-	        Product tk = ProductFactory.getProduct(new TicketFactory("°ø¿¬", 100000));
-	        System.out.println( com.toString() );
-	        System.out.println( tk.toString() );
-	    }
+	public static void main(String[] args) {
+		SocketAdapterImpl sai = new SocketAdapterImpl();
+		
+		System.out.println(sai.get120Volt().getVolts());
+		System.out.println(sai.get12Volt().getVolts());
 	}
 
+}
