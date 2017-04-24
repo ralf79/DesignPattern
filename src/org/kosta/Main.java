@@ -2,16 +2,19 @@ package org.kosta;
 
 public class Main {
 
-    public static void main(String[] args) {
-
-        Printable p = new PrinterProxy("Alice");
-        System.out.println("이름은 현재 " + p.getPrinterName() + "입니다.");
+	public static void main(String[] args) {
+		String[] problems = {"질럿","저글링","뮤탈","업글 저글링","탱크" };
         
-        p.setPrinterName("Bob");
-        System.out.println("이름은 현재 " + p.getPrinterName() + "입니다.");
+        Unit firebat = new Firebat();
+        Unit wraith = new Wraith();
+        Unit vulture = new Vulture();
         
-        p.print("Hello, world.");
+        firebat.setNext(wraith).setNext(vulture);
+        
+        for (String problem : problems) {
+        	firebat.support(problem);
+        }
 
-    }
+	}
 
 }
