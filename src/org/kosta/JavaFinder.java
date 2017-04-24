@@ -23,7 +23,7 @@ public class JavaFinder implements Visitor {
 	}
 
 	protected void doSomething(Leaf leaf) {
-		if (isYadong(leaf)) {
+		if (isMovie(leaf)) {
 			String fullPath = getFullPath(leaf);
 			javaList.add(fullPath);
 		}
@@ -37,7 +37,7 @@ public class JavaFinder implements Visitor {
 		return fullPath.append(leaf.getComponentName()).toString();
 	}
 
-	private boolean isYadong(Leaf leaf) {
+	private boolean isMovie(Leaf leaf) {
 		return leaf.getComponentName().endsWith(".avi");
 	}
 
