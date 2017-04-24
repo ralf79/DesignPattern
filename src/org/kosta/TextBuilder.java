@@ -1,9 +1,12 @@
 package org.kosta;
 
 public class TextBuilder implements Builder{
+	
     private StringBuffer buffer=new StringBuffer();
+
     @Override
     public void makeTitle(String title) {
+    	
         buffer.append("============================\n");
         buffer.append("¡º"+title+"¡»");
         buffer.append("\n");
