@@ -3,12 +3,7 @@ package org.kosta;
 public class Main {
 
 	public static void main(String[] args) {
-		 Composite main = createComposite();
-		 JavaFinder visitor = new JavaFinder();
-	        visitor.visit(main);
-	        for (String string : visitor.getjavaList()) {
-	            System.out.println(string);
-	        }
+		 
 	    }
 
 	    private static Composite createComposite() {
@@ -22,7 +17,6 @@ public class Main {
 	        Leaf leaf1111 = new Leaf("스타워즈.avi");
 	        Leaf leaf1112 = new Leaf("EBS자연.avi");
 	        Leaf leaf211 = new Leaf("플래닛어스.avi");
-	        Leaf leaf212 = new Leaf("동행.jpg");
 	        
 	        main.add(sub1);
 	        main.add(sub2);
