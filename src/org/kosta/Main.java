@@ -1,20 +1,26 @@
 package org.kosta;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Main {
 
 	public static void main(String[] args) {
-		Panel panel = new Panel();
-		CommandStack cs = new CommandStack();
-		cs.execute(new PanelChangeCommand(panel, "ÁÖÈ²"));
-		cs.execute(new PanelChangeCommand(panel, "³ë¶û"));
-		cs.execute(new PanelChangeCommand(panel, "ÃÊ·Ï"));
+		String expression = "w x z - +";
 
-		System.out.println("--undo --");
-		cs.undo();
-		cs.undo();
-		System.out.println("--redo--");
-		cs.redo();
-		cs.execute(new PanelChangeCommand(panel, "ÆÄ¶û"));
+		Evaluator sentence = new Evaluator(expression);
+
+		Map<String, Expression> variables = new HashMap<String, Expression>();
+
+		variables.put("w", new Number(5));
+
+		variables.put("x", new Number(10));
+
+		variables.put("z", new Number(42));
+
+		int result = sentence.interpret(variables);
+
+		System.out.println(result);
 	}
 
 }
