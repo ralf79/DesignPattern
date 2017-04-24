@@ -2,23 +2,42 @@ package org.kosta;
 
 public class Main {
 
+	
+	private static CoffeeFlavor[] flavors = new CoffeeFlavor[100];
+    private static CoffeeOrderContext[] tables = new CoffeeOrderContext[100];
+    private static int ordersMade = 0;
+    private static CoffeeFlavorFactory flavorFactory;
+   
+    public static void takeOrders(String flavorIn, int table) {
+        flavors[ordersMade] = flavorFactory.getCoffeeFlavor(flavorIn);
+        tables[ordersMade++] = new CoffeeOrderContext(table);
+    }
 	public static void main(String[] args) {
 
-		Aquarium aquarium = new Aquarium("[거북이 어항]");
-		AquariumDeco ADeco = new AquariumDeco(aquarium);
-		AquariumWater AWater = new AquariumWater(aquarium);
-		Turtle turtle = new Turtle(aquarium);
-		
-		System.out.println("청소시작");
-		
-		turtle.getAquarium();
-		ADeco.getAquarium();
-		AWater.getAquarium();
-		aquarium.setWash();
-		AWater.setAquarium();
-		ADeco.setAquarium();
-		turtle.insertAquarium();
-		
+		flavorFactory = new CoffeeFlavorFactory();
+	      
+        takeOrders("Cappuccino", 2);
+        takeOrders("Cappuccino", 2);
+        takeOrders("Frappe", 1);
+        takeOrders("Frappe", 1);
+        takeOrders("Xpresso", 1);
+        takeOrders("Frappe", 897);
+        takeOrders("Cappuccino", 97);
+        takeOrders("Cappuccino", 97);
+        takeOrders("Frappe", 3);
+        takeOrders("Xpresso", 3);
+        takeOrders("Cappuccino", 3);
+        takeOrders("Xpresso", 96);
+        takeOrders("Frappe", 552);
+        takeOrders("Cappuccino", 121);
+        takeOrders("Xpresso", 121);
+   
+        for (int i = 0; i < ordersMade; ++i) {
+            flavors[i].serveCoffee(tables[i]);
+        }
+        System.out.println(" ");
+        System.out.println("total CoffeeFlavor objects made: " +  flavorFactory.getTotalCoffeeFlavorsMade());
+
 	}
 
 }
