@@ -3,17 +3,24 @@ package org.kosta;
 public class Main {
 
 	public static void main(String[] args) {
-		Machine m = new Machine();
-        m.setState(1, 2);
-        System.out.println(m.toString());
-        int token = m.createMemento();
-       
-        m.setState(30, 40); // 중간에 상태가 바뀌어도
-        System.out.println(m.toString());
-        m.restoreState(token); // 기억된 토큰으로 복구 시킬 수 있다.
-        System.out.println(m.toString());
-
-
+		Watcher watcher = new Watcher();
+        Employee pc1 = new Employee("만화책보는 놈");
+        Employee pc2 = new Employee("퍼질러 자는 놈");
+        Employee pc3 = new Employee("포카치는 놈");
+        //spy는 pc3을 보고 있음.
+        //요놈은 꼰질르기의 대가
+        Spy spy = new Spy(pc3);
+        
+        watcher.addObserver(pc1);
+        watcher.addObserver(pc2);
+        watcher.addObserver(pc3);
+        watcher.addObserver(spy);
+        
+        watcher.action("사장 뜸.");
+        watcher.deleteObserver(pc3);
+        watcher.deleteObserver(spy);
+        
+        watcher.action("사장 뜸.");
 	}
 
 }
