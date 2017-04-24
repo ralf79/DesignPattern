@@ -1,26 +1,20 @@
 package org.kosta;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Iterator;
 
 public class Main {
 
 	public static void main(String[] args) {
-		String expression = "w x z - +";
+		Units units = new Units();
+		units.add("히드라");
+		units.add("마린");
+		units.add("질럿");
 
-		Evaluator sentence = new Evaluator(expression);
-
-		Map<String, Expression> variables = new HashMap<String, Expression>();
-
-		variables.put("w", new Number(5));
-
-		variables.put("x", new Number(10));
-
-		variables.put("z", new Number(42));
-
-		int result = sentence.interpret(variables);
-
-		System.out.println(result);
+		Iterator<String> iterator = units.iterator();
+		while (iterator.hasNext()) {
+			String element = iterator.next();
+			System.out.println(element);
+		}
 	}
 
 }
