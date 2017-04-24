@@ -3,13 +3,13 @@ package org.kosta;
 public class Main {
 
 	public static void main(String[] args) {
-		StateContext context = new StateContext();
-
-		context.processEvent(Action.EAT);
-		context.processEvent(Action.EAT);
-		context.processEvent(Action.GOTOBED);
-		context.processEvent(Action.DIGEST);
-		context.processEvent(Action.GOTOBED);
+		Seller cupSeller = new CupSeller();
+        Seller phoneSeller = new PhoneSeller();
+        
+        Mart mart1 = new Mart(cupSeller);
+        mart1.order();
+        Mart mart2 = new Mart(phoneSeller);
+        mart2.order();
 	}
 
 }
