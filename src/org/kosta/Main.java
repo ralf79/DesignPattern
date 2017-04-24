@@ -10,7 +10,7 @@ import org.kosta.impl.Marine;
 public class Main {
 
 	public static void main(String[] args) {
-		Unit marine = new Marine(new Gun());
+		Unit marine = new Marine(new Fire());
 		Unit firebat = new Firebat(new Fire());
 		Unit laserMarine = new Marine(new Laser());
 		
