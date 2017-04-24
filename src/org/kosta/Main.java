@@ -8,15 +8,14 @@ public class Main {
 		  Unit leaf3 = new Terran("SiegeTank");
 		  
 		  Platoon composite = new Platoon("1¼Ò´ë");
-		  
-		  composite.add(leaf1);
 		  composite.add(leaf2);
+		  composite.add(leaf1);
+		  
 		  composite.add(leaf3);
 		  
-		  composite.attack();
+		 // composite.attack();
 		  composite.move();
 		  
-		  leaf1.move();
 
 
 	}

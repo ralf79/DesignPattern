@@ -15,9 +15,12 @@ public class Platoon implements Unit {
 	@Override
 	public void attack() {
 		System.out.println(name + "가 공격한다");
+		
 		for (Unit unit : list) {
 			unit.attack();
 		}
+		
+		
 	}
 
 	@Override
