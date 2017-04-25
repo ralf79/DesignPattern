@@ -11,6 +11,7 @@ public class Main {
 		units.add("Áú·µ");
 
 		Iterator<String> iterator = units.iterator();
+		
 		while (iterator.hasNext()) {
 			String element = iterator.next();
 			System.out.println(element);
