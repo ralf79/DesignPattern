@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="org.kosta.Printer" project="DesignPattern" 
     file="/DesignPattern/src/org/kosta/Printer.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="114" y="425"/>    
+    <position height="-1" width="-1" x="259" y="397"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <interface id="2" language="java" name="org.kosta.Printable" project="DesignPattern" 
     file="/DesignPattern/src/org/kosta/Printable.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="446" y="165"/>    
+    <position height="-1" width="-1" x="565" y="101"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </interface>  
   <class id="3" language="java" name="org.kosta.PrinterProxy" project="DesignPattern" 
     file="/DesignPattern/src/org/kosta/PrinterProxy.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="501" y="514"/>    
+    <position height="-1" width="-1" x="689" y="401"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="org.kosta.Main" project="DesignPattern" 
     file="/DesignPattern/src/org/kosta/Main.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="768" y="290"/>    
+    <position height="-1" width="-1" x="130" y="150"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -38,12 +38,12 @@
     </display>  
   </class>  
   <realization id="5">    
-    <end type="SOURCE" refId="1"/>    
+    <bendpoint x="418" y="345"/>    
+    <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="2"/>  
   </realization>  
   <realization id="6">    
-    <bendpoint x="479" y="371"/>    
-    <end type="SOURCE" refId="3"/>    
+    <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="2"/>  
   </realization>  
   <association id="7">    

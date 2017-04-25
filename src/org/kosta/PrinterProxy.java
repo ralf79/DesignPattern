@@ -17,6 +17,7 @@ public class PrinterProxy implements Printable {
 		if (real != null) {
 			real.setPrinterName(name);
 		}
+		
 		this.name = name;
 	}
 

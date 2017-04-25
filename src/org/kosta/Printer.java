@@ -11,13 +11,9 @@ public class Printer implements Printable {
     }
 
     public Printer(String name) { // 생성자
-
         this.name = name;
-
         heavyJob("Printer의 인스턴스 (" + name + ")을 생성 중");
-
     }
-
     public void setPrinterName(String name) { // 이름의 설정
 
         this.name = name;
@@ -46,7 +42,7 @@ public class Printer implements Printable {
 
             try {
 
-                Thread.sleep(1000);
+                Thread.sleep(500);
 
             } catch (InterruptedException e) {
 
