@@ -1,8 +1,8 @@
 package org.kosta.abs;
 
-public class Weapon {
+public class Fire {
 
 	public void attack(){
-
+		System.out.println("ȰȰȰ");
 	}
 }
