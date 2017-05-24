@@ -7,6 +7,6 @@ public class Leaf extends Component{
     
     @Override
     public void add(Component c) {
-        throw new UnsupportedOperationException();
     }
+    
 }
