@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class PersonFactory {
     private static Map<String, Person> map = new HashMap<String, Person>();
-    public synchronized static Person getPerson(String name){
+    public static Person getPerson(String name){
         if (!map.containsKey(name)) {
             Person tmp = new Person(name);
             map.put(name, tmp);
