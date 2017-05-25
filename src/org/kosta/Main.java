@@ -1,21 +1,21 @@
 package org.kosta;
 
-import java.util.Iterator;
-
 public class Main {
 
 	public static void main(String[] args) {
-		Units units = new Units();
-		units.add("히드라");
-		units.add("마린");
-		units.add("질럿");
-
-		Iterator<String> iterator = units.iterator();
+		BookShelf bookShelf = new BookShelf(7);
+		bookShelf.appendBook(new Book("book1"));
+		bookShelf.appendBook(new Book("book2"));
+		bookShelf.appendBook(new Book("book3"));
+		bookShelf.appendBook(new Book("book4"));
+		bookShelf.appendBook(new Book("book5"));
+		bookShelf.appendBook(new Book("book6"));
+		bookShelf.appendBook(new Book("book7"));
 		
-		while (iterator.hasNext()) {
-			String element = iterator.next();
-			System.out.println(element);
+		Iterator it = bookShelf.iterator();
+		while(it.hasNext()){
+			Book book = (Book)it.next();
+			System.out.println(book.getName());
 		}
 	}
-
 }
