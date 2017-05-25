@@ -1,7 +1,7 @@
 package org.kosta;
 
 public class ControlTower {
-	private boolean inUse;
-
 	
 }
+
+
