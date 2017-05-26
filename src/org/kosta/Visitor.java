@@ -1,5 +1,7 @@
 package org.kosta;
 
 public interface Visitor {
-    void visit(Acceptor acceptor);
+
+	public void visit(Acceptor acceptor);
+
 }
